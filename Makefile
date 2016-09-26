@@ -23,7 +23,7 @@ INSTALL = \
 	cmt_annot$(EXE)
 
 install:
-	ocamfind install cmt_annot $(INSTALL)
+	ocamlfind install cmt_annot $(INSTALL)
 
 uninstall:
 	ocamlfind remove cmt_annot
