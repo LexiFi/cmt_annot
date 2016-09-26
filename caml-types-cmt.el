@@ -4,8 +4,11 @@
 (defvar caml-types-cmt-annot-path (executable-find "cmt_annot")
   "path to the cmt_annot tool")
 
+(defun caml-types-get-cmt-annot-path ()
+  caml-types-cmt-annot-path)
+
 (defun caml-types-run-cmt-annot (kind filename line1 col1 line2 col2)
-  (let* ((s (format "%s -%s %s %d %d" caml-types-cmt-annot-path kind filename line1 col1 line2 col2))
+  (let* ((s (format "%s -%s %s %d %d" (caml-types-get-cmt-annot-path) kind filename line1 col1 line2 col2))
          ;; (_ (message "cmt_annot invocation: %s" s))
          (out (car (read-from-string (shell-command-to-string s)))))
          ;; (_ (message "cmt_annot result:\n%s" out)))
