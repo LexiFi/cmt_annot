@@ -3,7 +3,7 @@ cmt_annot
 
 `cmt_annot` is a small command-line program that reimplements the functionality
 provided by `.annot` files using `.cmt` files instead.  Concretely, given a
-`.cmt` file and a `(row, column)` location, it queries the file for type and
+`.cmt` file and a `(line, column)` location, it queries the file for type and
 scope information.
 
 Installation
@@ -32,22 +32,33 @@ Usage: cmt_annot [-type | -ident] <filename> <startline> <startcol> [<endline> <
   --help  Display this list of options
 ```
 
+At the moment, results are returned in s-expression syntax.
+
 Emacs bidings
 -------------
 
-TBA
+The file `caml-types-cmt.el` adds support for this tool to the package
+`caml-types.el` included in the standard OCaml distribution.  To use it,
+make sure that this file is in your `load-path` and add
+
+    (require 'caml-types-cmt)
+
+somewhere in your `.emacs` or `init.el` files.  The tool `cmt_annot` should
+be in your `$PATH` (this is automatically the case when using `opam`).
+
+Contributions to improve this code are highly welcome.
 
 Vim bindings
 ------------
 
-None for the moment.  Contributions highly welcomed!
+None for the moment.  Contributions highly welcomed.
 
 Remarks
 -------
 
 Since `cmt_annot` depends on the precise data structures used by the OCaml type
-checker, it may not work when changing OCaml versions.  This should not be much of
-an issue when using `opam`.
+checker, it may not work when dealing with more than one OCaml versions at the
+same time.  This should not be much of an issue when using `opam`.
 
 About
 -----
