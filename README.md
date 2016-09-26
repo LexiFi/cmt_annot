@@ -45,7 +45,7 @@ None for the moment.  Contributions highly welcomed!
 Remarks
 -------
 
-Sicne `cmt_annot` depends on the precise data structures used by the OCaml type
+Since `cmt_annot` depends on the precise data structures used by the OCaml type
 checker, it may not work when changing OCaml versions.  This should not be much of
 an issue when using `opam`.
 
