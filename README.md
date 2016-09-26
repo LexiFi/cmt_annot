@@ -34,6 +34,33 @@ Usage: cmt_annot [-type | -ident] <filename> <startline> <startcol> [<endline> <
 
 At the moment, results are returned in s-expression syntax.
 
+When invoked with `-type` the result can either be
+
+  - `nil` if no expression was found at the given location, or
+
+  - `(l1 c1 l2 c2 s)` where `(l1, c1)` and `(l2, c2)` are the `(line, column)` starting
+    and ending positions of the term at the given location and `s` is a string (in the
+    OCaml `%S` format) describing the type of the term.
+
+When invoked with `-ident` the result can either be:
+
+  - `nil` if no identifier was found at the given location, or
+
+  - `(l1 c1 l2 c2 s k)` where `(l1, c1)` and `(l2, c2)` have the same meaning as
+    before, `s` is the fully qualified form of the identifier in question as a
+    string, and `k` is one of:
+
+    - `external`: the identifier is defined outside of the current module.
+
+    - `internal l1 c1 l2 c2`: the identifier is a variable reference, and `(l1, c1)`, `(l2, c2)`
+      determine its place of definition in the current module.
+
+    - `local-variable l1 c1 l2 c2`: the identifier is a local `let`-binding (this includes identifiers
+      bound in patterns) and `(l1, c1)`, `(l2, c2)` determine its *scope*.
+
+    - `global-variable l1 c1 l2 c2`: the identifier is a global `let`-binding and `(l1, c1)`, `(l2, c2)`
+      determine its *scope*.
+
 Emacs bidings
 -------------
 
