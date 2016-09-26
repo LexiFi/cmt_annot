@@ -11,5 +11,5 @@ dev-repo: "https://github.com/LexiFi/cmt_annot/"
 build: [[make "all"]]
 install: [make "install"]
 remove: ["ocamlfind" "remove" "cmt_annot"]
-
+depends: [ "ocamlfind" {build} ]
 available: [ ocaml-version >= "4.03.0" ]
