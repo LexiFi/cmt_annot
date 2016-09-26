@@ -1,0 +1,15 @@
+opam-version: "1.2"
+name: "cmt_annot"
+version: "1.0"
+maintainer: "Nicolas Ojeda Bar <nicolas.ojeda.bar@lexifi.com>"
+authors: "Nicolas Ojeda Bar <nicolas.ojeda.bar@lexifi.com>"
+homepage: "http://github.com/LexiFi/cmt_annot"
+bug-reports: "https://github.com/LexiFi/cmt_annot/issues"
+license: "MIT"
+dev-repo: "https://github.com/LexiFi/cmt_annot/"
+
+build: [[make]]
+install: [make "install"]
+remove: [make "uninstall"]
+
+available: [ ocaml-version >= "4.03.0" ]
