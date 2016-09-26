@@ -14,13 +14,15 @@ else
 	A_EXT = .cmxa
 endif
 
-.PHONY: all clean install uninstall
+.PHONY: all clean
 
-all: cmt_annot$(EXE)
+cmt_annot.install:
 	echo "bin: [ \"cmt_annot$(EXE)\" ]" > cmt_annot.install
 
 cmt_annot$(EXE): cmt_annot.ml
 	$(OCAMLC) -I +compiler-libs -o cmt_annot$(EXE) ocamlcommon$(A_EXT) cmt_annot.ml
+
+all: cmt_annot$(EXE) cmt_annot.install
 
 clean:
 	rm -f *.cm* cmt_annot$(EXE) *.o cmt_annot.install
