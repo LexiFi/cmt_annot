@@ -11,7 +11,7 @@ Installation
 
 Using opam:
 
-    opam install cmt_annot
+    opam pin add cmt_annot git://github.com/LexiFi/cmt_annot
 
 Or simply build it by doing
 
