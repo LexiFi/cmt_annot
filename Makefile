@@ -28,7 +28,7 @@ INSTALL = \
 	META \
 	cmt_annot$(EXE)
 
-install:
+install: all
 	ocamlfind install cmt_annot $(INSTALL)
 
 uninstall:

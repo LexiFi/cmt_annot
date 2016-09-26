@@ -11,24 +11,46 @@ Installation
 
     opam install cmt_annot
 
+You can also build & install simply using `ocamlfind` by doing
+
+    make
+    make install
+
+Or simply build it by doing
+
+    make
+
+and then copy the resulting `cmt_annot` (or `cmt_annot.exe` if on Windows) to
+somewhere suitable.
+
 Usage
 -----
 
+```
+Usage: cmt_annot [-type | -ident] <filename> <startline> <startcol> [<endline> <endcol>]
+  -v      Print timings
+  -type   Query type
+  -ident  Query ident
+  -help   Display this list of options
+  --help  Display this list of options
+```
+
+Emacs bidings
+-------------
+
 TBA
 
-Editor support
---------------
+Vim bindings
+------------
 
-### Emacs
-
-TBA
+None for the moment.  Contributions highly welcomed!
 
 Remarks
 -------
 
-In general, `cmt_annot` will only work with a single version of OCaml, since it
-depends on the precise data structures used by the OCaml type checker.  This
-should not be a problem if using the tool via `opam`.
+Sicne `cmt_annot` depends on the precise data structures used by the OCaml type
+checker, it may not work when changing OCaml versions.  This should not be much of
+an issue when using `opam`.
 
 About
 -----
