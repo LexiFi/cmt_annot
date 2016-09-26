@@ -8,8 +8,8 @@ bug-reports: "https://github.com/LexiFi/cmt_annot/issues"
 license: "MIT"
 dev-repo: "https://github.com/LexiFi/cmt_annot/"
 
-build: [[make]]
+build: [[make "all"]]
 install: [make "install"]
-remove: [make "uninstall"]
+remove: ["ocamlfind" "remove" "cmt_annot"]
 
 available: [ ocaml-version >= "4.03.0" ]
