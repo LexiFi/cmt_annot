@@ -1,0 +1,4 @@
+*.cm*
+*.o
+cmt_annot
+cmt_annot.exe
