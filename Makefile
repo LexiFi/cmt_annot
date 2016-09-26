@@ -17,19 +17,10 @@ endif
 .PHONY: all clean install uninstall
 
 all: cmt_annot$(EXE)
+	echo "bin: [ \"cmt_annot$(EXE)\" ]" > cmt_annot.install
 
 cmt_annot$(EXE): cmt_annot.ml
 	$(OCAMLC) -I +compiler-libs -o cmt_annot$(EXE) ocamlcommon$(A_EXT) cmt_annot.ml
 
 clean:
-	rm -f *.cm* cmt_annot$(EXE) *.o
-
-INSTALL = \
-	META \
-	cmt_annot$(EXE)
-
-install: all
-	ocamlfind install cmt_annot $(INSTALL)
-
-uninstall:
-	ocamlfind remove cmt_annot
+	rm -f *.cm* cmt_annot$(EXE) *.o cmt_annot.install

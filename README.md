@@ -9,12 +9,9 @@ scope information.
 Installation
 ------------
 
+Using opam:
+
     opam install cmt_annot
-
-You can also build & install simply using `ocamlfind` by doing
-
-    make
-    make install
 
 Or simply build it by doing
 

@@ -2,3 +2,4 @@
 *.o
 cmt_annot
 cmt_annot.exe
+cmt_annot.install
