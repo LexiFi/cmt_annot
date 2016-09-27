@@ -1,3 +1,0 @@
-version = "1.0"
-description = "Reimplentation of .annot functionality using .cmt files"
-requries = "compiler-libs.common"
