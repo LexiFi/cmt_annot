@@ -64,14 +64,14 @@ When invoked with `-ident` the result can either be:
 Emacs bidings
 -------------
 
-The file `caml-types-cmt.el` adds support for this tool to the package
-`caml-types.el` included in the standard OCaml distribution.  To use it,
-make sure that this file is in your `load-path` and add
+The file `cmt_annot.el` adds support for this tool to the standard `caml-mode`
+included in the standard OCaml distribution.  To use it, make sure that this
+file and the `caml-mode` package is in your `load-path` and add
 
-    (require 'caml-types-cmt)
+    (require 'cmt_annot)
 
-somewhere in your `.emacs` or `init.el` files.  The tool `cmt_annot` should
-be in your `$PATH` (this is automatically the case when using `opam`).
+somewhere in your `.emacs` or `init.el` files.  The tool `cmt_annot` should be
+in your `$PATH` as well (this is automatically the case when using `opam`).
 
 Contributions to improve this code are highly welcome.
 

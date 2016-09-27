@@ -103,5 +103,4 @@
 (define-key caml-mode-map [?\C-c?\C-t] 'caml-types-show-type-cmt)  ; "type"
 (define-key caml-mode-map [?\C-c?\C-l] 'caml-types-show-ident-cmt) ; "let"
 
-
-(provide 'caml-types-cmt)
+(provide 'cmt_annot)
