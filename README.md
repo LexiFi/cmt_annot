@@ -61,8 +61,8 @@ When invoked with `-ident` the result can either be:
     - `global-variable l1 c1 l2 c2`: the identifier is a global `let`-binding and `(l1, c1)`, `(l2, c2)`
       determine its *scope*.
 
-Emacs bidings
--------------
+Emacs bindings
+--------------
 
 The file `cmt_annot.el` adds support for this tool to the standard `caml-mode`
 included in the standard OCaml distribution.  To use it, make sure that this
